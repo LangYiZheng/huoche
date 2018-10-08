@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+
+
+        applicationId "com.example.dell004.myapplication"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 7
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+
+        }
+
+    }
+    repositories {
+        flatDir {
+            dir 'libs'
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    allprojects {
+        configurations {
+            all*.exclude group: 'com.android.support', module: 'support-v4'
+        }
+    }
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    //    implementation 'com.shizhefei:ViewPagerIndicator:1.1.6'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    compile 'com.zyl:trainlib:2.1.1'
+    compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    compile 'com.zyl:trainlib:3.0.0'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    compile 'org.greenrobot:eventbus:3.1.1'
+
+}

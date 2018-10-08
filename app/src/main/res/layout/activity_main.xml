@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#0290FE"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_post_top"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="姓名"/>
+
+            <RadioGroup
+                android:id="@+id/main_tab_group"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:id="@+id/btn_monitor_top"
+                    android:background="@drawable/btn_operation_selector"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:textSize="16sp"
+                    android:button="@null"
+                    android:text="作业监控" />
+
+                <RadioButton
+                    android:background="@drawable/btn_operation_selector"
+                    android:id="@+id/btn_find_top"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:textSize="16sp"
+                    android:text="资料查询" />
+
+            </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_setup_top"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/setting"
+            />
+
+    </LinearLayout>
+
+    <view.wiget.MySwipeRefreshLayout
+        android:id="@+id/srfl"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/main_fragment"/>
+
+    </view.wiget.MySwipeRefreshLayout>
+
+</LinearLayout>

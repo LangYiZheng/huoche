@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <view.wiget.PagerSlidingTab
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/bady_bule"
+        ></view.wiget.PagerSlidingTab>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bg_white">
+
+    </android.support.v4.view.ViewPager>
+    <!--<TextView-->
+        <!--android:id="@+id/jpush_msg_show"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/bady_bule"-->
+        <!--android:singleLine="true"-->
+        <!--android:ellipsize="marquee"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:focusable="true"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:marqueeRepeatLimit="marquee_forever"-->
+        <!--android:textSize="22sp" />-->
+
+</LinearLayout>

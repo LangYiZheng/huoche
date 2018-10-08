@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:gravity="center"
+    tools:context="view.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="80dp"
+            android:background="#E6E6E6"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/user"/>
+
+            <EditText
+                android:id="@+id/et_name_login"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="请输入用户名"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/et_pwd_login"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="5dp"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:textSize="18sp" />
+
+            <!--android:imeOptions="actionNext"-->
+            <!--android:singleLine="true"-->
+            <!--android:nextFocusForward="@+id/et_pwd_login"-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#E6E6E6"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/password"/>
+
+            <EditText
+                android:id="@+id/et_pwd_login"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:nextFocusForward="@+id/btn_submmit_login"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="5dp"
+                android:textSize="18sp" />
+
+            <!--android:imeOptions="actionDone"-->
+            <!--android:nextFocusForward="@+id/btn_submmit_login"-->
+            <!--android:singleLine="true"-->
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:visibility="gone"
+            android:layout_marginRight="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="忘记密码？"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="注册新用户"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+
+            <Button
+                android:id="@+id/btn_submmit_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/shape_btn_login"
+                android:text="登录"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_login"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progressbar_style"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
